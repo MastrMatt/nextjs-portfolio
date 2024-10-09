@@ -1,41 +1,4 @@
-export const skillCategories = [
-	{
-		id: 1,
-		title: "Languages and Tools",
-		skills: [
-			"Git",
-			"Docker",
-			"PostgreSQL",
-			"SQLite3",
-			"MongoDB",
-			"Java",
-			"Python",
-			"Julia",
-			"R",
-			"C",
-			"RISC-V Assembly",
-		],
-	},
-	{
-		id: 2,
-		title: "Web Technologies",
-		skills: [
-			"HTML/CSS/JS",
-			"TypeScript",
-			"React",
-			"Next.js",
-			"Tailwind CSS",
-			"Shadcn/UI",
-			"Django",
-			"Node.js",
-			"Express.js",
-			"Jest",
-			"Cypress",
-			"JSDoc",
-			"Swagger",
-		],
-	},
-];
+
 
 export const navItems = [
 	{ name: "About", link: "#about" },
@@ -50,7 +13,7 @@ export const gridItems = [
 		title: "I am an ambitious software developer with a unique background. It has prepared me to be a team player who communicates effectively, faces problems analytically and has the technical skills to tackle any challenge.",
 		description: "",
 		className: "lg:col-span-2 md:col-span-2 md:row-span-2 lg:min-h-[60vh]",
-		imgClassName: "w-full h-full",
+		imgClassName: "w-full h-full opacity-60",
 		titleClassName: "justify-end",
 		img: "./b1.svg",
 		spareImg: "",
@@ -82,10 +45,20 @@ export const gridItems = [
 		title: "Currently building a Dating Platform",
 		description: "The Inside Scoop",
 		className: "md:col-span-2 md:row-span-2",
-		imgClassName: "w-full h-full",
+		imgClassName: "w-full h-full opacity-60",
 		titleClassName: "justify-center md:justify-start lg:justify-center",
 		img: "/heart.jpg",
 		spareImg: "/grid.svg",
+	},
+	{
+		id: 6,
+		title: "Any Suggestions?",
+		description: "",
+		className: "lg:col-span-1 md:col-span-1 md:row-span-1",
+		imgClassName: "",
+		titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+		img: "",
+		spareImg: "",
 	},
 	{
 		id: 6,

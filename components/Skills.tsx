@@ -1,6 +1,106 @@
 import React from "react";
 import { Button } from "./ui/MovingBorders";
-import { skillCategories } from "../data-acess";
+import {
+	GitOriginal,
+	DockerOriginal,
+	PostgresqlOriginal,
+	SqliteOriginal,
+	MongodbOriginal,
+	JavaOriginal,
+	PythonOriginal,
+	JuliaOriginal,
+	ROriginal,
+	COriginal,
+	Html5Original,
+	Css3Original,
+	JavascriptOriginal,
+	TypescriptOriginal,
+	ReactOriginal,
+	NextjsOriginal,
+	TailwindcssOriginal,
+	DjangoPlain,
+	NodejsOriginal,
+	ExpressOriginal,
+	CypressioLine,
+	JestPlain,
+	SwaggerPlain,
+	SocketioOriginal,
+} from "devicons-react";
+
+const skillCategories = [
+	{
+		id: 1,
+		title: "Languages and Tools",
+		skills: [
+			"Git",
+			"Docker",
+			"PostgreSQL",
+			"SQLite3",
+			"MongoDB",
+			"Java",
+			"Python",
+			"Julia",
+			"R",
+			"C",
+			"RISC-V Assembly",
+		],
+	},
+	{
+		id: 2,
+		title: "Web Technologies",
+		skills: [
+			"HTML/CSS/JS",
+			"TypeScript",
+			"React",
+			"Next.js",
+			"Tailwind CSS",
+			"Shadcn/UI",
+			"Django",
+			"Node.js",
+			"Express.js",
+			"Jest",
+			"Cypress",
+			"JSDoc",
+			"Swagger",
+			"Socket.io",
+		],
+	},
+];
+
+const getSkillIcon = (skill: string) => {
+	const iconMap: { [key: string]: React.ReactNode } = {
+		Git: <GitOriginal className="w-5 h-5 mr-2" />,
+		Docker: <DockerOriginal className="w-5 h-5 mr-2" />,
+		PostgreSQL: <PostgresqlOriginal className="w-5 h-5 mr-2" />,
+		SQLite3: <SqliteOriginal className="w-5 h-5 mr-2" />,
+		MongoDB: <MongodbOriginal className="w-5 h-5 mr-2" />,
+		Java: <JavaOriginal className="w-5 h-5 mr-2" />,
+		Python: <PythonOriginal className="w-5 h-5 mr-2" />,
+		Julia: <JuliaOriginal className="w-5 h-5 mr-2" />,
+		R: <ROriginal className="w-5 h-5 mr-2" />,
+		C: <COriginal className="w-5 h-5 mr-2" />,
+		"HTML/CSS/JS": (
+			<>
+				<Html5Original className="w-5 h-5 mr-1" />
+				<Css3Original className="w-5 h-5 mr-1" />
+				<JavascriptOriginal className="w-5 h-5 mr-2" />
+			</>
+		),
+		TypeScript: <TypescriptOriginal className="w-5 h-5 mr-2" />,
+		React: <ReactOriginal className="w-5 h-5 mr-2" />,
+		"Next.js": <NextjsOriginal className="w-5 h-5 mr-2" />,
+		"Tailwind CSS": <TailwindcssOriginal className="w-5 h-5 mr-2" />,
+		Django: <DjangoPlain className="w-5 h-5 mr-2" />,
+		"Node.js": <NodejsOriginal className="w-5 h-5 mr-2" />,
+		"Express.js": <ExpressOriginal className="w-5 h-5 mr-2" />,
+		Jest: <JestPlain className="w-5 h-5 mr-2" />,
+		Cypress: <CypressioLine className="w-5 h-5 mr-2" />,
+		Swagger: <SwaggerPlain className="w-5 h-5 mr-2" />,
+		"Socket.io": <SocketioOriginal className="w-5 h-5 mr-2" />,
+	};
+
+	return iconMap[skill] || null;
+};
 
 const Skills = () => {
 	return (
@@ -31,8 +131,9 @@ const Skills = () => {
 								{category.skills.map((skill, index) => (
 									<li
 										key={index}
-										className="text-sm md:text-base bg-purple-100 dark:bg-purple-900 rounded-full px-3 py-1"
+										className="text-sm md:text-base bg-white dark:bg-gray-800 rounded-full px-3 py-1 flex items-center"
 									>
+										{getSkillIcon(skill)}
 										{skill}
 									</li>
 								))}

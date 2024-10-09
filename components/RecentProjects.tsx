@@ -22,7 +22,7 @@ const RecentProjects = () => {
 							title="/ui.aceternity.com"
 							href="https://twitter.com/mannupaaji"
 						>
-							<div className="relative flex items-center justify-center lg:w-[40vw] w-[80vw] overflow-hidden h-[30vh] lg:h-[40vh] mb-10">
+							<div className="relative flex items-center justify-center lg:w-[40vw] w-[80vw] overflow-hidden h-[30vh] lg:h-[40vh] mb-8">
 								<div
 									className="relative w-full h-full overflow-hidden lg:rounded-3xl"
 									style={{ backgroundColor: "#13162D" }}
